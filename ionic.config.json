@@ -1,0 +1,8 @@
+{
+  "name": "primitive-quantum-wp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "d8825fd6"
+}
