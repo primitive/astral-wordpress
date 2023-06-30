@@ -27,7 +27,7 @@ const Page = () => {
   useEffect(() => {
     const fetchHomePage = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_WORDPRESS_URL}/wp-json/wp/v2/pages?slug=home`);
+        const response = await axios.get(`${process.env.REACT_APP_WORDPRESS_URL}/wp-json/wp/v2/pages?slug=${process.env.REACT_APP_WORDPRESS_HOMEPAGE_SLUG}}`);
         
         if (response.data.length > 0) {
           setPage(response.data[0]);

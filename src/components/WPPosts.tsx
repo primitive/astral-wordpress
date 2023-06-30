@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {
+  IonButton
+} from '@ionic/react';
 
 interface Post {
   id: number;
@@ -45,9 +48,9 @@ const Posts = () => {
   return (
     <div className="ion-padding">
       <h2>WordPress Posts</h2>
-      <button onClick={toggleDisplay}>
+      <IonButton onClick={toggleDisplay}>
         {showContent ? 'Show Excerpt' : 'Show Content'}
-      </button>
+      </IonButton>
       {posts.map((post) => (
         <div key={post.id}>
           <h3>{post.title.rendered}</h3>
