@@ -6,6 +6,14 @@ Run these commands to clone and install your app:
 
     npm install -g @ionic/cli @capacitor/assets
 
+    git clone https://github.com/primitiveshaun/primitive-quantum-wp.git primitive-quantum-wp
+    
+    cd primitive-quantum-wp && npm install
+
+Then, to run your app in development mode, use:
+
+    ionic serve
+
 Need help? See the [full installation guide](https://ionicframework.com/docs/intro/cli) 
 
 Use VS Code? Develop faster with our [VS Code extension](https://ionic.link/vscode) 
