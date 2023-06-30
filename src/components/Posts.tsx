@@ -23,6 +23,7 @@ interface Post {
 
 const Posts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
+  const [showContent, setShowContent] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -40,14 +41,25 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
+  const toggleDisplay = () => {
+    setShowContent((prevState) => !prevState);
+  };
+
   return (
     <div className="ion-padding">
       <h2>WordPress Posts</h2>
+      <button onClick={toggleDisplay}>
+        {showContent ? 'Show Excerpt' : 'Show Content'}
+      </button>
       {posts.map((post) => (
         <div key={post.id}>
           <h3>{post.title.rendered}</h3>
           <small>{post.date}</small>
-          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          {showContent ? (
+            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+          )}
         </div>
       ))}
     </div>
