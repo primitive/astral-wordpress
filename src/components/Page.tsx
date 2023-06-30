@@ -27,9 +27,7 @@ const Page = () => {
   useEffect(() => {
     const fetchHomePage = async () => {
       try {
-        // sk-dev todo: extract config to a separate file
-        // const response = await axios.get('https://your-wordpress-site/wp-json/wp/v2/posts');
-        const response = await axios.get('https://sknow.it/wp-json/wp/v2/pages?slug=homepage');
+        const response = await axios.get(`${process.env.REACT_APP_WORDPRESS_URL}/wp-json/wp/v2/pages?slug=home`);
         
         if (response.data.length > 0) {
           setPage(response.data[0]);
