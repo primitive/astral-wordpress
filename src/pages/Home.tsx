@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import Posts from '../components/Posts';
+import HomePage from '../components/HomePage';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
 
-        <Posts />
+        <HomePage />
 
       </IonContent>
     </IonPage>
