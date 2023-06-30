@@ -1,57 +1,59 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-interface Post {
-  id: number;
-  title: { rendered: string };
-  date: string;
-  modifed: string;
-  excerpt: { rendered: string };
-  content: { rendered: string };
-  featured_media: number;
-  slug: string;
-  status: string;
-  type: string;
-  format: string;
-  sticky: boolean;
-  template: string;
-  comment_status: string;
-  author: number;
-  categories: number[];
-  tags: number[];
+interface Page {
+    id: number;
+    title: { rendered: string };
+    date: string;
+    modifed: string;
+    excerpt: { rendered: string };
+    content: { rendered: string };
+    featured_media: number;
+    slug: string;
+    status: string;
+    type: string;
+    format: string;
+    sticky: boolean;
+    template: string;
+    comment_status: string;
+    author: number;
+    categories: number[];
+    tags: number[];
 }
 
-const Posts = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+const Page = () => {
+  const [page, setPage] = useState<Page | null>(null);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchHomePage = async () => {
       try {
         // sk-dev todo: extract config to a separate file
         // const response = await axios.get('https://your-wordpress-site/wp-json/wp/v2/posts');
-        const response = await axios.get('https://sknow.it/wp-json/wp/v2/posts');
-
-        setPosts(response.data);
+        const response = await axios.get('https://sknow.it/wp-json/wp/v2/pages?slug=homepage');
+        
+        if (response.data.length > 0) {
+          setPage(response.data[0]);
+        }
       } catch (error) {
-        console.error('Error fetching WordPress posts:', error);
+        console.error('Error fetching WordPress homepage:', error);
       }
     };
 
-    fetchPosts();
+    fetchHomePage();
   }, []);
 
   return (
     <div className="ion-padding">
-      <h2>WordPress Posts</h2>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h3>{post.title.rendered}</h3>
-          <small>{post.date}</small>
-          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-        </div>
-      ))}
+      {page ? (
+        <>
+          <h2>{page.title.rendered}</h2>
+          <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
 
-export default Posts;
+export default Page;
