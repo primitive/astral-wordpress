@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+interface Post {
+  id: number;
+  title: { rendered: string };
+  content: { rendered: string };
+  // Add other properties as needed
+}
+
 const WordPressContent = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -10,7 +17,7 @@ const WordPressContent = () => {
         // sk-dev todo: extract config to a separate file
         // const response = await axios.get('https://your-wordpress-site/wp-json/wp/v2/posts');
         const response = await axios.get('https://sknow.it/wp-json/wp/v2/posts');
-
+        
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching WordPress posts:', error);
