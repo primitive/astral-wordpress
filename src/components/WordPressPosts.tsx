@@ -4,8 +4,14 @@ import axios from 'axios';
 interface Post {
   id: number;
   title: { rendered: string };
+  date: string;
+  modifed: string;
+  excerpt: { rendered: string };
   content: { rendered: string };
-  // Add other properties as needed
+  author: number;
+  slug: string;
+  status: string;
+  type: string;
 }
 
 const WordPressContent = () => {
@@ -17,7 +23,6 @@ const WordPressContent = () => {
         // sk-dev todo: extract config to a separate file
         // const response = await axios.get('https://your-wordpress-site/wp-json/wp/v2/posts');
         const response = await axios.get('https://sknow.it/wp-json/wp/v2/posts');
-        
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching WordPress posts:', error);
@@ -33,7 +38,8 @@ const WordPressContent = () => {
       {posts.map((post) => (
         <div key={post.id}>
           <h3>{post.title.rendered}</h3>
-          <p>{post.content.rendered}</p>
+          <h3>{post.date}</h3>
+          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </div>
       ))}
     </div>
