@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import Posts from '../components/WordPressPosts';
+import Posts from '../components/Posts';
 import './Home.css';
 
 const Home: React.FC = () => {
