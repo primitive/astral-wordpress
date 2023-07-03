@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {
-  IonButton
-} from '@ionic/react';
+import { IonButton } from '@ionic/react';
 
 interface Post {
   id: number;
