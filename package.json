@@ -1,6 +1,6 @@
 {
-  "name": "primitive-quantum-wp",
-  "version": "0.0.2",
+  "name": "astral-wordpress",
+  "version": "0.0.3",
   "private": true,
   "dependencies": {
     "@capacitor/app": "5.0.2",

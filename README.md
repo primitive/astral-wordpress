@@ -1,4 +1,4 @@
-# primitive-quantum-wp
+# astral-wordpress
 
 ### Overview
 
@@ -18,9 +18,9 @@ Run these commands to clone and install your app:
 
     npm install -g @ionic/cli @capacitor/assets
 
-    git clone https://github.com/primitiveshaun/primitive-quantum-wp.git primitive-quantum-wp
+    git clone https://github.com/primitiveshaun/astral-wordpress.git astral-wordpress
     
-    cd primitive-quantum-wp && npm install
+    cd astral-wordpress && npm install
 
 Then, to run your app in development mode, use:
 
