@@ -64,7 +64,7 @@
     "Safari >=14",
     "iOS >=14"
   ],
-  "description": "A Demo Ionic project",
+  "description": "A Demo Ionic React project with WordPress as the backend",
   "volta": {
     "node": "18.17.0"
   }

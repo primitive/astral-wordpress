@@ -43,11 +43,11 @@ Ionic FrameworkOpen source cross-platform mobile UI toolkit.[Quickstart docs
 
 ](https://ionicframework.com/docs)
 
-Identity VaultBiometric authentication solution for mobile apps.[Learn more](/app/d8825fd6/native/identity-vault) 
+Identity VaultBiometric authentication solution for mobile apps. [Learn more](/app/d8825fd6/native/identity-vault) 
 
-Auth ConnectSecure authentication for any hybrid mobile app.[Learn more](/app/d8825fd6/native/auth-connect) 
+Auth ConnectSecure authentication for any hybrid mobile app. [Learn more](/app/d8825fd6/native/auth-connect) 
 
-Secure StorageHigh performance, secure data storage.[Learn more](/app/d8825fd6/native/secure-storage) 
+Secure StorageHigh performance, secure data storage. [Learn more](/app/d8825fd6/native/secure-storage) 
 
 ### Take your development further
 
@@ -69,4 +69,4 @@ Use Automations to add continuous build and real-time app updates to your app de
 
 Read the quickstart guide
 
-Make Commits the default screen
+
