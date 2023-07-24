@@ -8,9 +8,12 @@ Built as a training demo as covered in the following post: [How to Build a WordP
 
 For more information on how to get started please refer to the [Ionic Framework Docs](https://ion.link/docs).
 
-### Headscratchers Area (ignore me)
+### Headscratchers Area (should I use Ionic)
 
 -   [ ]  How best to get the data from the WP API into the app? Axios or https://www.npmjs.com/package/@wordpress/api-fetch
+-   [ ]  Ionic starter templates are a bit dated. Dependencies seem to be in need of a serious update.
+-   [ ]  Possible performance issues.
+
 
 ### Start Development Here
 
@@ -18,7 +21,7 @@ Run these commands to clone and install your app:
 
     npm install -g @ionic/cli @capacitor/assets
 
-    git clone https://github.com/primitiveshaun/astral-wordpress.git astral-wordpress
+    git clone https://github.com/primitive/astral-wordpress.git
     
     cd astral-wordpress && npm install
 
