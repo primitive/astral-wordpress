@@ -1,6 +1,18 @@
 # primitive-quantum-wp
 
-### Start here
+### Overview
+
+This is a basic starter project for an Ionic React App leveraging the WordPress REST API as a backend.
+
+Built as a training demo as covered in the following post: [How to Build a WordPress Powered React App with Ionic](https://sknow.it/blog/how-to-build-a-wordpress-powered-react-app-with-ionic/)
+
+For more information on how to get started please refer to the [Ionic Framework Docs](https://ion.link/docs).
+
+### Headscratchers Area (ignore me)
+
+-   [ ]  How best to get the data from the WP API into the app? Axios or https://www.npmjs.com/package/@wordpress/api-fetch
+
+### Start Development Here
 
 Run these commands to clone and install your app:
 
