@@ -1,3 +1,6 @@
+
+![screenshot](docs/pd-astral-wordpress.png)
+
 # astral-wordpress
 
 ### Overview
