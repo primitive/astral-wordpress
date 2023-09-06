@@ -5,7 +5,7 @@ interface Post {
   id: number;
   title: { rendered: string };
   date: string;
-  modifed: string;
+  modified: string;
   excerpt: { rendered: string };
   content: { rendered: string };
   featured_media: number;
