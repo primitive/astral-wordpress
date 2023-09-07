@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 interface Post {
@@ -27,7 +27,7 @@ const Pages = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_WORDPRESS_URL}/wp-json/wp/v2/pages`);
+        const response = await axios.get(`${import.meta.env.VITE_WORDPRESS_URL}/wp-json/wp/v2/pages`);
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching WordPress pages:', error);
