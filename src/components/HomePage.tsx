@@ -5,7 +5,7 @@ interface Page {
     id: number;
     title: { rendered: string };
     date: string;
-    modifed: string;
+    modified: string;
     excerpt: { rendered: string };
     content: { rendered: string };
     featured_media: number;
@@ -27,7 +27,7 @@ const Page = () => {
   useEffect(() => {
     const fetchHomePage = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_WORDPRESS_URL}/wp-json/wp/v2/pages?slug=${process.env.REACT_APP_WORDPRESS_HOMEPAGE_SLUG}}`);
+        const response = await axios.get(`${import.meta.env.VITE_WORDPRESS_URL}/wp-json/wp/v2/pages?slug=${import.meta.env.VITE_WORDPRESS_HOMEPAGE_SLUG}`);
         
         if (response.data.length > 0) {
           setPage(response.data[0]);

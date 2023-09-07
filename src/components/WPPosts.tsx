@@ -6,7 +6,7 @@ interface Post {
   id: number;
   title: { rendered: string };
   date: string;
-  modified: string;
+  modifed: string;
   excerpt: { rendered: string };
   content: { rendered: string };
   featured_media: number;
@@ -29,7 +29,7 @@ const Posts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_WORDPRESS_URL}/wp-json/wp/v2/posts`);
+        const response = await axios.get(`${import.meta.env.VITE_WORDPRESS_URL}/wp-json/wp/v2/posts`);
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching WordPress posts:', error);
