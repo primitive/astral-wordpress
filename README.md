@@ -52,6 +52,8 @@ Capacitor for Web Native apps on iOS and Android.[Quickstart docs](https://capac
 ### Headscratchers and Further Development
 
 -[ ]  Fix: Readmore URL via wp plugin
+-[ ]  Add step 4 guide (splash screen + icons)
+-[ ]  Add step 5 guide (deployment)
 
 -[ ]  How best to get the data from the WP API into the app? Axios or https://www.npmjs.com/package/@wordpress/api-fetch
 -[ ] REST or GraphQL?
