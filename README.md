@@ -49,7 +49,9 @@ Ionic Framework Open source cross-platform mobile UI toolkit.[Quickstart docs](h
 Capacitor for Web Native apps on iOS and Android.[Quickstart docs](https://capacitorjs.com/docs/getting-started)
 
 
-### Headscratchers Area
+### Headscratchers and Further Development
+
+-[ ]  Fix: Readmore URL via wp plugin
 
 -[ ]  How best to get the data from the WP API into the app? Axios or https://www.npmjs.com/package/@wordpress/api-fetch
 -[ ] REST or GraphQL?
